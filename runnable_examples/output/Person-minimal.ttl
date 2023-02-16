@@ -1,4 +1,0 @@
-@prefix example_runner_sandbox: <https://w3id.org/turbomam/example-runner-sandbox/> .
-
-example_runner_sandbox:123 a example_runner_sandbox:Person .
-
