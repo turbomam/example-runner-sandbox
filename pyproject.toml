@@ -12,6 +12,9 @@ python = "^3.9"
 linkml-runtime = "^1.4"
 cruft = "^2.12.0"
 
+[tool.poetry.group.dev.dependencies]
+linkml = "^1.4.4"
+
 [tool.poetry-dynamic-versioning]
 enable = true
 vcs = "git"
