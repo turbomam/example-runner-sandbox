@@ -71,13 +71,13 @@ install:
 # check we are up to date
 check: cruft-check
 cruft-check:
-	$(RUN) cruft check
+	cruft check
 cruft-diff:
-	$(RUN) cruft diff
+	cruft diff
 
 update: update-template update-linkml
 update-template:
-	$(RUN) cruft update
+	cruft update
 
 # todo: consider pinning to template
 update-linkml:
