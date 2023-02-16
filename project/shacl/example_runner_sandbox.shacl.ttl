@@ -9,18 +9,18 @@ schema:Thing a sh:NodeShape ;
     sh:closed true ;
     sh:description "A generic grouping for any identifiable entity" ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "A human-readable name for a thing" ;
+    sh:property [ sh:description "A human-readable description for a thing" ;
             sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path schema:name ],
+            sh:order 2 ;
+            sh:path schema:description ],
         [ sh:description "A unique identifier for a thing" ;
             sh:maxCount 1 ;
             sh:order 0 ;
             sh:path schema:identifier ],
-        [ sh:description "A human-readable description for a thing" ;
+        [ sh:description "A human-readable name for a thing" ;
             sh:maxCount 1 ;
-            sh:order 2 ;
-            sh:path schema:description ] ;
+            sh:order 1 ;
+            sh:path schema:name ] ;
     sh:targetClass schema:Thing .
 
 example_runner_sandbox:PersonCollection a sh:NodeShape ;
@@ -37,19 +37,18 @@ example_runner_sandbox:Person a sh:NodeShape ;
     sh:closed true ;
     sh:description "Represents a Person" ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "A human-readable description for a thing" ;
+    sh:property [ sh:description "A unique identifier for a thing" ;
             sh:maxCount 1 ;
-            sh:order 6 ;
-            sh:path schema:description ],
+            sh:order 4 ;
+            sh:path schema:identifier ],
         [ sh:description "Date on which a person is born" ;
             sh:maxCount 1 ;
             sh:order 1 ;
             sh:path schema:birthDate ],
-        [ sh:description "The main email address of a person" ;
+        [ sh:description "A human-readable description for a thing" ;
             sh:maxCount 1 ;
-            sh:order 0 ;
-            sh:path schema:email ;
-            sh:pattern "^\\S+@[\\S+\\.]+\\S+" ],
+            sh:order 6 ;
+            sh:path schema:description ],
         [ sh:description "living or dead status" ;
             sh:in ( PATO:0001421 PATO:0001422 "UNKNOWN" ) ;
             sh:maxCount 1 ;
@@ -59,10 +58,11 @@ example_runner_sandbox:Person a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:order 5 ;
             sh:path schema:name ],
-        [ sh:description "A unique identifier for a thing" ;
+        [ sh:description "The main email address of a person" ;
             sh:maxCount 1 ;
-            sh:order 4 ;
-            sh:path schema:identifier ],
+            sh:order 0 ;
+            sh:path schema:email ;
+            sh:pattern "^\\S+@[\\S+\\.]+\\S+" ],
         [ sh:description "Number of years since birth" ;
             sh:maxCount 1 ;
             sh:order 2 ;
