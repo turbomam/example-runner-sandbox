@@ -1,0 +1,6 @@
+name: example_runner_sandbox
+author: Mark Andrew Miller <mam@lbl.gov>
+description: A place to learn about linkml-run-examples. Brought to you by the LinkML Cookiecutter.
+source_schema_path: src/example_runner_sandbox/schema/example_runner_sandbox.yaml
+google_sheet_id: 1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ
+google_sheet_tabs: personinfo enums
